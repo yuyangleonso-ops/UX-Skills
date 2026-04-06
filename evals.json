@@ -1,0 +1,40 @@
+{
+  "skill_name": "arco-design-guide",
+  "evals": [
+    {
+      "id": 1,
+      "eval_name": "guide-user-list-design",
+      "prompt": "我要设计一个用户管理列表页面，使用 Arco Design 风格。请提供详细的设计指导，包括布局建议、组件选择、颜色使用规范和代码示例。",
+      "expected_output": "应该输出符合 Arco Design 规范的用户列表页设计，包含筛选区、表格、分页的标准布局，使用 Primary-6 作为主色，14px 正文，正确的按钮层级",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "guide-form-validation",
+      "prompt": "我需要创建一个带表单验证的用户注册页面，使用 Arco Design。请提供表单设计指导，包括字段验证规则、错误提示、提交逻辑等最佳实践。",
+      "expected_output": "应该输出符合 Arco Design 表单最佳实践的代码，包括 useForm Hook 使用、验证规则、错误提示、Modal+Form 联动模式",
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "review-ui-screenshot",
+      "prompt": "请审查以下 UI 设计是否符合 Arco Design 规范：\n\n我设计了一个数据展示页面，有以下元素：\n- 标题：24px 加粗\n- 主按钮：蓝色 #1890ff（Ant Design 的颜色）\n- 表格：没有设置 rowKey\n- 按钮组：两个 Primary 按钮并排\n- 文字：使用 13px 和 15px 混搭\n- 间距：使用 10px, 15px, 25px 等不规则数值\n\n请指出所有不符合 Arco 规范的地方，并给出修复建议。",
+      "expected_output": "应该指出所有问题：主色错误（应该用 #165DFF）、表格缺少 rowKey、按钮层级错误（不能有两个 Primary）、字号不规范（应该用 14px 为主）、间距不规范（应该是 4px 的倍数）",
+      "files": []
+    },
+    {
+      "id": 4,
+      "eval_name": "guide-color-typography",
+      "prompt": "我正在使用 Arco Design 设计一个 Dashboard 页面。请告诉我应该使用什么颜色作为主色，文字层级怎么设计，间距应该用什么规范。",
+      "expected_output": "应该说明主色是 #165DFF，文字层级 Grey-10/8/6/5 的使用场景，间距基于 4px 的倍数",
+      "files": []
+    },
+    {
+      "id": 5,
+      "eval_name": "review-code-issues",
+      "prompt": "请审查以下 React 代码是否符合 Arco Design 最佳实践：\n\n```jsx\nfunction BadExample() {\n  return (\n    <div>\n      <Button type=\"primary\">保存</Button>\n      <Button type=\"primary\">提交</Button>\n      <Button>取消</Button>\n      <Table columns={columns} data={data} />\n      <Form>\n        <Form.Item label=\"名称\">\n          <Input />\n        </Form.Item>\n      </Form>\n    </div>\n  );\n}\n```\n\n请指出问题并给出修复后的代码。",
+      "expected_output": "应该指出：两个 Primary 按钮（应该用 Primary+Default+Text）、表格缺少 rowKey、表单项缺少 field 和验证规则、应该使用 Space 组件控制间距",
+      "files": []
+    }
+  ]
+}
